@@ -30,7 +30,7 @@ python -c "import numpy, pandas, scikit-learn; print('All core packages installe
 ## Data Preparation
 ### Data Structure
 All input data should be placed in the input/ directory of the project root. The framework requires dual-modal sequence features (GPN-MSA and SpliceBERT) in .npy format and label files in .csv format.
-###Sequence Feature Files (.npy)
+### Sequence Feature Files (.npy)
 Two types of sequence features are required, with fixed dimensions and lengths:
 
 |Feature Type|Length|Dimension|File Format|
@@ -38,7 +38,7 @@ Two types of sequence features are required, with fixed dimensions and lengths:
 |GPN-MSA|128|768|.npy|
 |SpliceBERT|503|512|.npy|
 
-###Label Files (.csv)
+### Label Files (.csv)
 Labels are stored in CSV files and must be aligned with the order of sequence features (1:1 mapping between feature rows and label rows).
 
 |Data Split|Label Path|
@@ -48,7 +48,7 @@ Labels are stored in CSV files and must be aligned with the order of sequence fe
 |Test Set (Non-Canonical)|input/test_noncanonical.csv|
 |Test Set (Canonical)|input/test_canonical.csv|
 
-###Model-Specific Parameters
+### Model-Specific Parameters
 |Parameter|Purpose|
 |------|------|
 |embedding_size_DLM1|Embedding dimension for GPN-MSA (fixed to 768, match feature dimension)|
@@ -56,7 +56,7 @@ Labels are stored in CSV files and must be aligned with the order of sequence fe
 |embedding_size_DLM2|Embedding dimension for SpliceBERT (fixed to 512)|
 |DLM_seq_len2|Sequence length for SpliceBERT (fixed to 503)|
 
-##Notes
+## Notes
 1. All file paths in sta_config.py are relative to the project root (replace absolute paths with input/ for portability).
 2. Ensure CUDA 12.1 is installed and compatible with the PyTorch version in GSLM-DSM.yml.
 3. For cross-validation (--CV True), the output will be saved to result/sta_test.csv; for hold-out testing, results are saved to the same path with test set metrics.
