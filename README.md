@@ -7,7 +7,6 @@ GSLM-DSM (Genomic Sequence Language Model - Deep Sequence Model) is a deep learn
 - Anaconda/Miniconda (Python 3.9+)
 - CUDA 12.1 (compatible with PyTorch 2.5.1)
 - GPU with CUDA support (recommended: NVIDIA RTX 3090/4090 or Tesla V100/A100)
-- **响应式设计**: 完美适配各种设备
 
 ### Step 1: Create Conda Environment
 Use the provided GSLM-DSM.yml file to build the environment with all dependencies:
