@@ -34,9 +34,9 @@ All input data should be placed in the input/ directory of the project root. The
 Two types of sequence features are required, with fixed dimensions and lengths:
 
 |Feature Type|Length|Dimension|File Format|
-|------|------|------|
-|GPN-MSA|128|768|.npy|
-|SpliceBERT|503|512|.npy|
+|------|------|------|------|
+|GPN-MSA|128|768|npy|
+|SpliceBERT|503|512|npy|
 
 ### Label Files (.csv)
 Labels are stored in CSV files and must be aligned with the order of sequence features (1:1 mapping between feature rows and label rows).
